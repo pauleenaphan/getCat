@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title> getCat </title>
+</head>
+<body>
+    <header>
+        <h1> getCat </h1>
+        <p> Cats cats cats everywhere! </p>
+    </header>
+
+    <main>
+        <h2> How many cat images should we get? </h2>
+        <div>
+            <input type="number" class="numOfImgs" placeholder="9" required/>
+            <button id="subBtn"> Get Images </button> 
+        </div>
+        
+    
+        <section>
+            <h3> Images Here: </h3>
+            <p id="loading"> Loading... </p>
+            <div class="catImgContainer">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Images provided by <a href="https://thecatapi.com" target="_blank" rel="noopener noreferrer">The Cat API</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
