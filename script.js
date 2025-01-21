@@ -1,6 +1,7 @@
 $("#subBtn").on("click", function(){
-    if(($(".numOfImgs").val()) == 0){
-        alert("Value must be bigger than 0")
+    if((($(".numOfImgs").val()) > 10) || (($(".numOfImgs").val()) < 1)){
+        alert("Value must be from 1-10");
+        return
     }
     fetchCatImgs($(".numOfImgs").val());
 
@@ -13,8 +14,9 @@ $("#subBtn").on("click", function(){
 
 // Calls api and fetches img then calls load function
 function fetchCatImgs(count){
+    // Need to allow api key to grab more than 10 photos 
     $.ajax({
-        url: `https://api.thecatapi.com/v1/images/search?limit=${count}&api_key=${ENV.API_KEY}`,
+        url: `https://api.thecatapi.com/v1/images/search?limit=${count}`,
         type: "GET",
         dataType: "json",
         success: function(response){
